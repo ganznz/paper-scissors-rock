@@ -1,8 +1,3 @@
-// create function getting computers choice
-// create function getting persons choice
-// compare choices and declare winner
-
-
 // Computer's choice
 const computerPlay = () => {
     const randomNumber = Math.floor(Math.random() * 3);
@@ -25,12 +20,9 @@ const computerPlay = () => {
 }
 
 
-// if player doesn't  choose "paper", "scissors", or "rock", print an error.
-// if the player does print either of these three, save in a variable then compare that variable to the computers choice.
-
-
-const playRound = (playerSelection, computerSelection) => {
-    let playerChoice = playerSelection.toLowerCase();
+const playRound = (playerSelection) => {
+    const playerChoice = playerSelection.toLowerCase();
+    const computerSelection = computerPlay();
 
     if (!(playerChoice === "paper" || playerChoice === "scissors" || playerChoice === "rock")) {
         console.warn('Choose either "rock", "paper", or "scissors".');
@@ -76,4 +68,12 @@ const playRound = (playerSelection, computerSelection) => {
     }
 }
 
-console.log(playRound("rock", computerPlay()));
+const game = (gameCount) => {
+    console.log(`You have requested to play ${gameCount} of Rock Paper Scissors:`);
+    console.log(" ");
+    for (let i = 0; i <= gameCount; i++) {
+        console.log(playRound("Paper"));
+    }
+}
+
+game(10);
