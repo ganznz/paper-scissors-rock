@@ -1,10 +1,3 @@
-let playerChoice;
-const playerPrompt = () => {
-    playerChoice = prompt("Throw paper, scissors, or rock");
-    playerChoice = playerChoice.toLowerCase();
-}
-playerPrompt();
-
 // Computer's choice
 const computerPlay = () => {
     const randomNumber = Math.floor(Math.random() * 3);
@@ -24,51 +17,6 @@ const computerPlay = () => {
             console.warn("Something went wrong generating the computers choice.");
     }
     return computerChoice;
-}
-
-
-const randomGamemode = () => {
-    const playerThrew = computerPlay() // Selects a random choice for the player
-    const computerSelection = computerPlay();
-
-    if (playerThrew === "paper") { // Execute if player throws 'paper'
-        switch (computerSelection) {
-            case "rock":
-                return `You won! You threw ${playerThrew} and the computer threw ${computerSelection}.`;
-                break;
-            case "scissors":
-                return `You lost :( You threw ${playerThrew} and the computer threw ${computerSelection}.`;
-                break;
-            default:
-                return `The game was a draw. You both threw ${playerChoice}`;
-        }
-    }
-
-    if (playerThrew === "scissors") { // Execute if player throws 'scissors'
-        switch (computerSelection) {
-            case "paper":
-                return `You won! You threw ${playerThrew} and the computer threw ${computerSelection}.`;
-                break;
-            case "rock":
-                return `You lost :( You threw ${playerThrew} and the computer threw ${computerSelection}.`;
-                break;
-            default:
-                return `The game was a draw. You both threw ${playerThrew}`;
-        }
-    }
-    
-    if (playerThrew === "rock") { // Execute if player throws 'rock'
-        switch (computerSelection) {
-            case "scissors":
-                return `You won! You threw ${playerThrew} and the computer threw ${computerSelection}.`;
-                break;
-            case "paper":
-                return `You lost :( You threw ${playerThrew} and the computer threw ${computerSelection}.`;
-                break;
-            default:
-                return `The game was a draw. You both threw ${playerThrew}`;
-        }
-    }
 }
 
 
@@ -127,12 +75,14 @@ const playRound = () => {
     }
 }
 
-const game = (gameCount) => {
-    console.log(`You have requested to play ${gameCount} games of Paper Scissors Rock:`);
+const game = (gameCount = 1) => {
+    (gameCount === 1) ? console.log(`You have requested to play ${gameCount} game of Paper Scissors Rock:`) :
+    console.log(`You have requested to play ${gameCount} games of Paper Scissors Rock:`);   
+    
     console.log(" ");
-    for (let i = 0; i <= gameCount; i++) {
+    for (let i = 1; i <= gameCount; i++) {
         console.log(playRound());
     }
 }
 
-game(10);
+game(1);

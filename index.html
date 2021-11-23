@@ -5,8 +5,43 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Paper Scissors Rock</title>
-    <script src="app.js"></script>
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/app.js" defer></script>
+    <script src="js/game-functions.js" defer></script>
 </head>
 <body>
+    <div class="start-screen">
+        <button class="play-button">PLAY!</button>
+    </div>
+    <h1>PAPER SCISSORS ROCK</h1>
+    <div class="game-container">
+        <div class="user-container">
+            <div class="player-stats">
+                <h2>YOU 😩</h2>
+                <h3 class="player-score">SCORE: 0</h3>
+            </div>
+            <div class="selection-container">
+                <img src="images/hand-paper-solid.svg" alt="paper" class="paper player-choice">
+                <img src="images/hand-scissors-solid.svg" alt="scissors" class="scissors player-choice">
+                <img src="images/hand-rock-solid.svg" alt="rock" class="rock player-choice">
+            </div>
+        </div>
+        <div class="user-container">
+            <div class="player-stats">
+                <h2>BOT 🤖</h2>
+                <h3 class="computer-score">SCORE: 0</h3>
+            </div>
+            <div class="selection-container">
+                <img src="images/hand-paper-solid.svg" alt="paper" class="paper computer-choice">
+                <img src="images/hand-scissors-solid.svg" alt="scissors" class="scissors computer-choice">
+                <img src="images/hand-rock-solid.svg" alt="rock" class="rock computer-choice">
+            </div>
+        </div>
+    </div>
+    
+    <footer>
+        <h3>Made by Ganz</h3>
+        <a href="https://github.com/Lollganz/paper-scissors-rock/tree/psr-ui" target="_blank"><img src="images/GitHub-Mark-120px-plus.png" alt="View Repository"></a>
+    </footer>
 </body>
 </html>
