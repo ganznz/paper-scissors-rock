@@ -37,12 +37,18 @@ body {
     color: rgb(255, 255, 255);
     border: none;
     border-radius: 7px;
+    transition: all 0.2s linear;
+}
+
+.screen-fade {
+    opacity: 0.5;
+    transition: 0.1s;
 }
 
 .play-button:hover {
     background-color: white;
     color: rgb(252, 154, 35);
-    box-shadow: 0 0 0 5px rgb(252, 154, 35);
+    box-shadow: 0 0 0 4px rgb(252, 154, 35);
 }
 
 h1 {
@@ -89,6 +95,10 @@ img {
     width: 150px;
 }
 
+.paper, .scissors, .rock {
+    transition: 0.2s;
+}
+
 .paper:hover {
     filter: drop-shadow(0 7px rgb(105, 214, 78));
 }
@@ -111,11 +121,17 @@ footer {
     align-items: center;
     gap: 20px;
     font-size: 20px;
+    transition: 0.3s;
 }
 
-footer img {
+#github-logo {
     height: auto;
     width: 40px;
+    transition: 0.2s;
+}
+
+#github-logo:hover {
+    transform: rotate(-15deg);
 }
 
 footer h3 {
@@ -125,5 +141,5 @@ footer h3 {
 }
 
 footer:hover {
-    filter: drop-shadow(0 -8px 0 rgb(255, 215, 167))
+    filter: drop-shadow(0 -13px 0 rgb(255, 215, 167))
 }
