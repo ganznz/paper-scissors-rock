@@ -20,12 +20,19 @@ const computerPlay = () => {
 }
 
 
-const playRound = (playerSelection) => {
-    const playerChoice = playerSelection.toLowerCase();
+const playRound = () => {
     const computerSelection = computerPlay();
 
-    if (!(playerChoice === "paper" || playerChoice === "scissors" || playerChoice === "rock")) {
-        console.warn('Choose either "rock", "paper", or "scissors".');
+    if (playerChoice === "fuck you" || playerChoice === "fuck u" || playerChoice === "bitch" || playerChoice === "i hate you" || playerChoice === "die") {
+        alert("Fuck you too");
+        playerPrompt();
+    }
+
+    if (playerChoice === "random") {
+        return randomGamemode();
+    } else if (!(playerChoice === "paper" || playerChoice === "scissors" || playerChoice === "rock")) {
+        alert('You must choose "paper", "scissors", or "rock".      HINT: enter "random"' );
+        playerPrompt();
     }
 
     if (playerChoice === "paper") { // Execute if player throws 'paper'
@@ -68,12 +75,14 @@ const playRound = (playerSelection) => {
     }
 }
 
-const game = (gameCount) => {
-    console.log(`You have requested to play ${gameCount} of Rock Paper Scissors:`);
+const game = (gameCount = 1) => {
+    (gameCount === 1) ? console.log(`You have requested to play ${gameCount} game of Paper Scissors Rock:`) :
+    console.log(`You have requested to play ${gameCount} games of Paper Scissors Rock:`);   
+    
     console.log(" ");
-    for (let i = 0; i <= gameCount; i++) {
-        console.log(playRound("Paper"));
+    for (let i = 1; i <= gameCount; i++) {
+        console.log(playRound());
     }
 }
 
-game(10);
+game(1);

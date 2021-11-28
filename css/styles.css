@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Barlow', sans-serif;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.start-screen {
+    background-color: white;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.play-button {
+    font-size: 45px;
+    padding: 10px 20px;
+    font-weight: bold;
+    background-color: rgb(252, 154, 35);
+    color: rgb(255, 255, 255);
+    border: none;
+    border-radius: 7px;
+    transition: all 0.2s linear;
+}
+
+.screen-fade {
+    opacity: 0.5;
+    transition: 0.1s;
+}
+
+.play-button:hover {
+    background-color: white;
+    color: rgb(252, 154, 35);
+    box-shadow: 0 0 0 4px rgb(252, 154, 35);
+}
+
+h1 {
+    color: rgb(252, 154, 35);
+    padding-top: 50px;
+    font-size: 50px;
+}
+
+.game-container {
+    display: flex;
+}
+
+.user-container {
+    background-color: rgb(230, 230, 230);
+    border-radius: 5px;
+    margin: 0 15px;
+    padding: 20px;
+    text-align: center;
+    flex: 1 1 auto;
+}
+
+.player-stats {
+    display: flex;
+    justify-content: space-between;
+    font-size: 20px;
+}
+
+.selection-container {
+    margin-top: 30px;
+}
+
+.selection-container img {
+    background: rgb(255, 255, 255);
+    margin: 0 5px;
+    padding: 5px;
+    border-radius: 5px;
+    width: 100px;
+    height: 100px;
+    margin-bottom: 15px;
+}
+
+img {
+    height: auto;
+    width: 150px;
+}
+
+.paper, .scissors, .rock {
+    transition: 0.2s;
+}
+
+.paper:hover {
+    filter: drop-shadow(0 7px rgb(105, 214, 78));
+}
+
+.scissors:hover {
+    filter: drop-shadow(0 7px rgb(252, 154, 35));
+}
+
+.rock:hover {
+    filter: drop-shadow(0 7px rgb(255, 96, 96));
+}
+
+footer {
+    background-color: rgb(252, 154, 35);
+    width: 100%;
+    text-align: center;
+    padding: 10px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    font-size: 20px;
+    transition: 0.3s;
+}
+
+#github-logo {
+    height: auto;
+    width: 40px;
+    transition: 0.2s;
+}
+
+#github-logo:hover {
+    transform: rotate(-15deg);
+}
+
+footer h3 {
+    color: white;
+    font-weight: bold;
+    -webkit-text-stroke: 3px rgba(255, 255, 255, 0.3);
+}
+
+footer:hover {
+    filter: drop-shadow(0 -13px 0 rgb(255, 215, 167))
+}
