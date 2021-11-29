@@ -51,10 +51,15 @@ body {
     box-shadow: 0 0 0 4px rgb(252, 154, 35);
 }
 
-h1 {
+.game-title {
     color: rgb(252, 154, 35);
     padding-top: 50px;
     font-size: 50px;
+}
+
+.char-visible {
+    opacity: 1;
+    transition: 0.5s;
 }
 
 .game-container {
@@ -80,7 +85,7 @@ h1 {
     margin-top: 30px;
 }
 
-.selection-container img {
+.player-choice, .computer-choice {
     background: rgb(255, 255, 255);
     margin: 0 5px;
     padding: 5px;
@@ -97,6 +102,10 @@ img {
 
 .paper, .scissors, .rock {
     transition: 0.2s;
+}
+
+.selected {
+    background: rgb(135, 232, 128);
 }
 
 .paper:hover {
