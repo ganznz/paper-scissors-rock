@@ -90,8 +90,6 @@ const playRound = (e) => {
                 break;
         }
     }
-
-
 }
 
 // function that iterates an event over a nodelist
@@ -146,6 +144,8 @@ const createEndScreen = (resultText) => {
 const resetGame = () => {
     initialPlayerScore = 0;
     initialComputerScore = 0;
+    playerScoreText.textContent = `SCORE: ${initialPlayerScore}`;
+    computerScoreText.textContent = `SCORE: ${initialComputerScore}`;
     
     playerChoices.forEach(index => { // resets player choices bg colours
         index.classList.remove("selected")
