@@ -1,6 +1,8 @@
 // -- VARIABLES -- //
 const startScreenDiv = document.querySelector(".start-screen");
 const startPlayButton = document.querySelector(".play-button");
+const gameCountInput = document.querySelector(".game-count-input");
+const gameCountText = document.querySelector(".game-count-text");
 
 const playerChoices = document.querySelectorAll(".player-choice");
 const computerChoices = document.querySelectorAll(".computer-choice");
@@ -40,6 +42,17 @@ const getComputerSelection = () => {
     }
     return computerChoice;
 }
+
+
+// change game count
+let gameCount = 5;
+gameCountInput.addEventListener("change", (e) => {
+    gameCount = e.target.value;
+
+    (gameCount > 1) ? gameCountText.textContent = `You will play ${gameCount} games`
+    : gameCountText.textContent = `You will play ${gameCount} game`
+});
+
 
 const playRound = (e) => {
     const computerSelection = getComputerSelection(); // Gets computers choice
@@ -112,7 +125,7 @@ addEventListenerList(playerChoices, "click", (e) => {
 
     playRound(e);
     
-    if (initialPlayerScore >= 5 || initialComputerScore >= 5) {
+    if (initialPlayerScore >= gameCount || initialComputerScore >= gameCount) {
         if (initialPlayerScore > initialComputerScore) {
           createEndScreen(`You won lesgooo! The score was ${initialPlayerScore} - ${initialComputerScore}`);  
         } else {

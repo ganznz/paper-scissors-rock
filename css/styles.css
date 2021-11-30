@@ -79,6 +79,25 @@ body {
     font-size: 50px;
 }
 
+form {
+    font-size: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+form input {
+    padding: 5px;
+    background-color: rgb(255, 198, 129);
+    border: 3px solid rgb(255, 170, 66);
+    border-radius: 5px;
+    font-size: 20px;
+}
+
+.game-count-text {
+    margin-top: 20px;
+}
+
 .char-visible {
     opacity: 1;
     transition: 0.5s;
@@ -94,7 +113,11 @@ body {
     margin: 0 15px;
     padding: 20px;
     text-align: center;
-    flex: 1 1 auto;
+    flex: 0 1 auto;
+}
+
+.user-container {
+    margin-bottom: 100px;
 }
 
 .player-stats {
