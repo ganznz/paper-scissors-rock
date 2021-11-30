@@ -48,9 +48,7 @@ const getComputerSelection = () => {
 let gameCount = 5;
 gameCountInput.addEventListener("change", (e) => {
     gameCount = e.target.value;
-
-    (gameCount > 1) ? gameCountText.textContent = `You will play ${gameCount} games`
-    : gameCountText.textContent = `You will play ${gameCount} game`
+    gameCountText.textContent = `First to ${gameCount} points wins!`;
 });
 
 
